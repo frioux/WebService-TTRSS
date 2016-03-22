@@ -6,7 +6,7 @@ use warnings;
 use WebService::TTRSS;
 
 my $x = WebService::TTRSS->new(
-  root_uri => 'https://rss.afoolishmanifesto.com',
+  root_uri => $ENV{TTRSS_URL},
   debug => $ENV{TTRSS_DEBUG},
 );
 

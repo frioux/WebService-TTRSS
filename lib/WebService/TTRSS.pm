@@ -1,5 +1,7 @@
 package WebService::TTRSS;
 
+# https://tt-rss.org/gitlab/fox/tt-rss/wikis/ApiReference
+
 use Moo 2;
 
 use HTTP::Tiny;
@@ -97,6 +99,8 @@ sub login {
 
   $self->api_level($c->{api_level})
     if exists $c->{api_level};
+
+  return;
 }
 
 sub logout {
